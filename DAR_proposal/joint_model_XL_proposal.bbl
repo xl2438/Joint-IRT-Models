@@ -1,0 +1,349 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{Bergner2018}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=402fcf96ee38a180065992c483fe9c4a}{%
+           family={Bergner},
+           familyi={B\bibinitperiod},
+           given={Yoav},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=91a950bd729ac721787cc514b1a7afc5}{%
+           family={Davier},
+           familyi={D\bibinitperiod},
+           given={Alina\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0,
+           prefix={von},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \strng{namehash}{9318348846dd84bd548170f741cf282a}
+      \strng{fullhash}{9318348846dd84bd548170f741cf282a}
+      \strng{bibnamehash}{9318348846dd84bd548170f741cf282a}
+      \strng{authorbibnamehash}{9318348846dd84bd548170f741cf282a}
+      \strng{authornamehash}{9318348846dd84bd548170f741cf282a}
+      \strng{authorfullhash}{9318348846dd84bd548170f741cf282a}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This article reviews how National Assessment of Educational Progress (NAEP) has come to collect and analyze data about cognitive and behavioral processes (process data) in the transition to digital assessment technologies over the past two decades. An ordered five-level structure is proposed for describing the uses of process data. The levels in this hierarchy range from ignoring the processes (i.e., counting only the outcomes), to incorporating process data as auxiliary or essential in addition to the outcome, to modeling the process as the outcome itself, either holistically in a rubric score or in a measurement model that accounts for sequential dependencies. Historical examples of these different uses are described as well as recent results using nontraditional analytical approaches. In the final section, speculative future directions incorporating state-of-the-art technologies and analysis methods are described with an eye toward hard-to-measure constructs such as higher order problem-solving and col...}
+      \field{issn}{1076-9986}
+      \field{journaltitle}{Journal of Educational and Behavioral Statistics}
+      \field{number}{X}
+      \field{title}{{Process Data in NAEP}}
+      \field{volume}{XX}
+      \field{year}{2018}
+      \field{pages}{107699861878470}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3102/1076998618784700
+      \endverb
+      \verb{file}
+      \verb :C$\backslash$:/Users/XLIU003/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Bergner, von Davier - 2018 - Process Data in NAEP.pdf:pdf
+      \endverb
+      \keyw{educational measurement,process,psychometrics,simulation-based tasks}
+    \endentry
+    \entry{Daane2005}{report}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=23fecf2b2e86ec84b942a3bf2bfa4ed4}{%
+           family={Daane},
+           familyi={D\bibinitperiod},
+           given={Mary\bibnamedelima C.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f6b3f43ce17811d3ee1552a6f9e41292}{%
+           family={Campbell},
+           familyi={C\bibinitperiod},
+           given={Jay\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b26714c1ed8ec4410b3f49ae1aeef112}{%
+           family={Grigg},
+           familyi={G\bibinitperiod},
+           given={Wendy\bibnamedelima S.},
+           giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=556258d3549402a3af4953bafae6b703}{%
+           family={Goodman},
+           familyi={G\bibinitperiod},
+           given={Madeline\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d7196b37838bf74c25e3f375450d93d}{%
+           family={Oranje},
+           familyi={O\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {National Center for Education Statistics}%
+      }
+      \list{location}{1}{%
+        {Washington, D.C.}%
+      }
+      \strng{namehash}{be2766481f1a307bf46193fa0e9c4410}
+      \strng{fullhash}{80e22c179ff6f49d6d5717062b04d8a1}
+      \strng{bibnamehash}{80e22c179ff6f49d6d5717062b04d8a1}
+      \strng{authorbibnamehash}{80e22c179ff6f49d6d5717062b04d8a1}
+      \strng{authornamehash}{be2766481f1a307bf46193fa0e9c4410}
+      \strng{authorfullhash}{80e22c179ff6f49d6d5717062b04d8a1}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Fourth-Grade Students Reading Aloud: NAEP 2002 Special Study of Oral Reading}}
+      \field{type}{techreport}
+      \field{year}{2005}
+      \verb{urlraw}
+      \verb https://nces.ed.gov/pubsearch/pubsinfo.asp?pubid=2006469
+      \endverb
+      \verb{url}
+      \verb https://nces.ed.gov/pubsearch/pubsinfo.asp?pubid=2006469
+      \endverb
+    \endentry
+    \entry{Hao2015}{misc}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=ef198108594fae58b5f076e56ebb85d0}{%
+           family={Hao},
+           familyi={H\bibinitperiod},
+           given={Jiangang},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4839d82e3bf44d967c1aff32be8a7d2}{%
+           family={Shu},
+           familyi={S\bibinitperiod},
+           given={Zhan},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4dedd7e287f3734a517b259dbef5e373}{%
+           family={Davier},
+           familyi={D\bibinitperiod},
+           given={Alina},
+           giveni={A\bibinitperiod},
+           givenun=0,
+           prefix={von},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{726e91ea2f7bb841e6bb894f93482901}
+      \strng{fullhash}{290f2aba8c05be391450b17f7900a5aa}
+      \strng{bibnamehash}{290f2aba8c05be391450b17f7900a5aa}
+      \strng{authorbibnamehash}{290f2aba8c05be391450b17f7900a5aa}
+      \strng{authornamehash}{726e91ea2f7bb841e6bb894f93482901}
+      \strng{authorfullhash}{290f2aba8c05be391450b17f7900a5aa}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Students' activities in game/scenario-based tasks (G/SBTs, hereafter) can be characterized by a sequence of time-stamped actions of different types with different attributes. For a subset of the G/SBTs where only the order of the actions are of great interest, the process data can be well characterized as a string of characters (action string, hereafter) if we encode each action name as a single character. In this paper, we report our work on evaluating students' performances by comparing how far their action strings are from the action string that corresponds to the best performance, where the proximity is quantified by the edit distance between the strings. Specifically, we choose the Levenshtein distance, which is defined as the minimum number of insertion, deletion and replacement needed to convert one character string to another. Our results show a strong correlation between the edit distances and the scores obtained from the scoring rubrics of the WELL task from NAEP TEL, implying the edit distance to the best performance sequence can be considered as a new feature variable that encodes information about students' proficiency, which sheds light on the value of data driven scoring rules for test and task development and for refining the scoring rubrics.}
+      \field{booktitle}{Journal of Educational Data Mining}
+      \field{issn}{2157-2100}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{{Analyzing process data from game/scenario-based tasks: An edit distance approach}}
+      \field{volume}{7}
+      \field{year}{2015}
+      \field{pages}{33\bibrangedash 50}
+      \range{pages}{18}
+      \verb{file}
+      \verb :C$\backslash$:/Users/XLIU003/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Hao, Shu, Davier - 2015 - Analyzing process data from gamescenario-based tasks An edit distance approach.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Markowetz2014}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=a4c8235decd27665d34e68859ffc5b29}{%
+           family={Markowetz},
+           familyi={M\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=92ae9b6ad1fa6aebc2a36be0ae194825}{%
+           family={B{ł}aszkiewicz},
+           familyi={B\bibinitperiod},
+           given={Konrad},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=85a422c364450900a3a3a8c1571a583f}{%
+           family={Montag},
+           familyi={M\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=801e4a422a1decefaf799b851ea8d391}{%
+           family={Switala},
+           familyi={S\bibinitperiod},
+           given={Christina},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=10f3ed33d35091cc37ad0967d1402c3f}{%
+           family={Schlaepfer},
+           familyi={S\bibinitperiod},
+           given={Thomas\bibnamedelima E.},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9f4473236474e0f5c7e34337a96b88aa}
+      \strng{fullhash}{e00e8ac0baad42eea2ca6a9ca78f8947}
+      \strng{bibnamehash}{e00e8ac0baad42eea2ca6a9ca78f8947}
+      \strng{authorbibnamehash}{e00e8ac0baad42eea2ca6a9ca78f8947}
+      \strng{authornamehash}{9f4473236474e0f5c7e34337a96b88aa}
+      \strng{authorfullhash}{e00e8ac0baad42eea2ca6a9ca78f8947}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{For the first time in history, it is possible to study human behavior on great scale and in fine detail simultaneously. Online services and ubiquitous computational devices, such as smartphones and modern cars, record our everyday activity. The resulting Big Data offers unprecedented opportunities for tracking and analyzing behavior. This paper hypothesizes the applicability and impact of Big Data technologies in the context of psychometrics both for research and clinical applications. It first outlines the state of the art, including the severe shortcomings with respect to quality and quantity of the resulting data. It then presents a technological vision, comprised of (i) numerous data sources such as mobile devices and sensors, (ii) a central data store, and (iii) an analytical platform, employing techniques from data mining and machine learning. To further illustrate the dramatic benefits of the proposed methodologies, the paper then outlines two current projects, logging and analyzing smartphone usage. One such study attempts to thereby quantify severity of major depression dynamically; the other investigates (mobile) Internet Addiction. Finally, the paper addresses some of the ethical issues inherent to Big Data technologies. In summary, the proposed approach is about to induce the single biggest methodological shift since the beginning of psychology or psychiatry. The resulting range of applications will dramatically shape the daily routines of researches and medical practitioners alike. Indeed, transferring techniques from computer science to psychiatry and psychology is about to establish Psycho-Informatics, an entire research direction of its own. © 2013 Elsevier Ltd.}
+      \field{issn}{03069877}
+      \field{journaltitle}{Medical Hypotheses}
+      \field{month}{4}
+      \field{number}{4}
+      \field{title}{{Psycho-Informatics: Big Data shaping modern psychometrics}}
+      \field{volume}{82}
+      \field{year}{2014}
+      \field{pages}{405\bibrangedash 411}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1016/j.mehy.2013.11.030
+      \endverb
+      \verb{urlraw}
+      \verb http://www.ncbi.nlm.nih.gov/pubmed/24529915 https://linkinghub.elsevier.com/retrieve/pii/S0306987713005598
+      \endverb
+      \verb{url}
+      \verb http://www.ncbi.nlm.nih.gov/pubmed/24529915%20https://linkinghub.elsevier.com/retrieve/pii/S0306987713005598
+      \endverb
+    \endentry
+    \entry{Pinnell1995}{report}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=b2c08270d1896c6ac16b2d52b6cce9ac}{%
+           family={Pinnell},
+           familyi={P\bibinitperiod},
+           given={G.S.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=573f987e503badf7d237686ef6e4d065}{%
+           family={Pikulski},
+           familyi={P\bibinitperiod},
+           given={J.J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a9ac1622a30639832de5e3861f96a9a6}{%
+           family={Wixson},
+           familyi={W\bibinitperiod},
+           given={K.K.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7f2bc85a842f44d3fe3b489d1c3a76fe}{%
+           family={Campbell},
+           familyi={C\bibinitperiod},
+           given={J.R.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c44cf3a9958a798d750d7ccecca897e3}{%
+           family={Gough},
+           familyi={G\bibinitperiod},
+           given={P.B.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=56b3bee2cb348f11a423518a0dcc1592}{%
+           family={Beatty},
+           familyi={B\bibinitperiod},
+           given={A.S.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {National Center for Education Statistics}%
+      }
+      \list{location}{1}{%
+        {Washington, D.C.}%
+      }
+      \strng{namehash}{0257312d3bca3fbda544f2e2741b564e}
+      \strng{fullhash}{36b1f3b14d92257b2ecf4e84ea285910}
+      \strng{bibnamehash}{36b1f3b14d92257b2ecf4e84ea285910}
+      \strng{authorbibnamehash}{36b1f3b14d92257b2ecf4e84ea285910}
+      \strng{authornamehash}{0257312d3bca3fbda544f2e2741b564e}
+      \strng{authorfullhash}{36b1f3b14d92257b2ecf4e84ea285910}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Listening to Children Read Aloud}}
+      \field{type}{techreport}
+      \field{year}{1995}
+      \verb{urlraw}
+      \verb https://eric.ed.gov/?id=ED378550
+      \endverb
+      \verb{url}
+      \verb https://eric.ed.gov/?id=ED378550
+      \endverb
+    \endentry
+    \entry{TheNationalCenterforEducationStatistics2013}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ab7d36b8b65995907bb99b20ed78fddf}{%
+           family={{The National Center for Education Statistics}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab7d36b8b65995907bb99b20ed78fddf}
+      \strng{fullhash}{ab7d36b8b65995907bb99b20ed78fddf}
+      \strng{bibnamehash}{ab7d36b8b65995907bb99b20ed78fddf}
+      \strng{authorbibnamehash}{ab7d36b8b65995907bb99b20ed78fddf}
+      \strng{authornamehash}{ab7d36b8b65995907bb99b20ed78fddf}
+      \strng{authorfullhash}{ab7d36b8b65995907bb99b20ed78fddf}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Technology and Engineering Literacy Assessments}}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://nces.ed.gov/nationsreportcard/tel/
+      \endverb
+      \verb{url}
+      \verb https://nces.ed.gov/nationsreportcard/tel/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

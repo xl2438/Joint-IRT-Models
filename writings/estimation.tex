@@ -1,0 +1,205 @@
+\documentclass[doc]{apa7}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}
+\title{EM Algorithm Details}
+\author{Xiang Liu}
+\affiliation{Educational Testing Service}
+
+
+\begin{document}
+\maketitle
+	\section{Derivative identities}
+	We first establish some identities for derivatives that will be used
+  repeatedly.
+  The probability of observing a tool use is given by the following response
+  function,
+  \begin{equation}
+    P(W_{ij} = 1 | \theta_{i2}) = \frac{1}{1 + \exp(-\alpha_j
+    (\theta_{i2} - \beta_j))} = P_{ij}.
+  \end{equation}
+  The probability of not observing a tool use is then 
+  \begin{equation}
+    P(W_{ij} = 0 | \theta_{i2}) = 1 - P_{ij} = Q_{ij}.
+  \end{equation}
+  The first-order partial derivatives are 
+  \begin{equation}
+    \frac{\partial P_{ij}}{\partial \alpha_j} = \frac{\theta_{i2}\exp(-\alpha_j
+    (\theta_{i2}-\beta_j))}{(1+\exp(-\alpha_j(\theta_{i2}-\beta_j)))^2} =
+    (\theta_{i2}-\beta_j) P_{ij} Q_{ij},
+  \end{equation}
+  and
+  \begin{equation}
+    \frac{\partial P_{ij}}{\partial \beta_j} = -\frac{\alpha_j\exp(-\alpha_j
+    (\theta_{i2}-\beta_j))}{(1+\exp(-\alpha_j(\theta_{i2}-\beta_j)))^2} =
+    -\alpha_j P_{ij} Q_{ij}.
+  \end{equation}
+  The probability of getting a correct response conditional on $W_{ij} = w_{ij}$
+  is
+  \begin{equation}
+    P(X_{ij} = 1 | \theta_{i1}, w_{ij}) = \frac{1}{1 + \exp(-a_j (\theta_{i1} -
+    b_j + w_{ij} \gamma_j))} = \dot{P_{ij}}.
+  \end{equation}
+  Then the probability of getting an incorrect response is
+  \begin{equation}
+    P(X_{ij} = 0 | \theta_{i1}, w_{ij}) = 1 - \dot{P_{ij}} = \dot{Q_{ij}}.
+  \end{equation}
+  Taking first-order partial derivatives, it leads to
+  \begin{equation}
+    \frac{\partial \dot{P_{ij}}}{\partial a_j} = (\theta_{i1}-b_j+w_{ij}\gamma_j)
+    \dot{P_{ij}}\dot{Q_{ij}},
+  \end{equation}
+  \begin{equation}
+    \frac{\partial \dot{P_{ij}}}{\partial b_j} = -a_j\dot{P_{ij}}\dot{Q_{ij}},
+  \end{equation}
+  and
+  \begin{equation}
+    \frac{\partial \dot{P_{ij}}}{\partial \gamma_j} = a_jw_{ij}\dot{P_{ij}}
+    {\dot{Q_{ij}}}.
+  \end{equation}
+
+  \section{Likelihood Equations}
+  Given $\bm{X} = \bm{x}$, $\bm{W} = \bm{w}$, and $\bm{\Theta} = \bm{\theta}$
+  the complete data likelihood of the model parameters are
+  \begin{equation}
+    L = \prod_{i=1}^{N} \phi(\bm{\theta}_i;\rho)\prod_{j=1}^{J} P_{ij}^{w_{ij}} Q_{ij}^{1-w_{ij}}
+    \dot{P_{ij}}^{x_{ij}} \dot{Q_{ij}}^{1-x_{ij}}.
+  \end{equation}
+  Equivalently, the compete data log-likelihood is
+  \begin{equation}
+    \log L = \sum_{j=1}^{J}l_j(\alpha_j, \beta_j) + \sum_{j=1}^{J}l_j(a_j,
+    b_j,\gamma_j) + \sum_{i=1}^{N} \log \phi(\bm{\theta}_i;\rho),
+  \end{equation}
+  where
+  \begin{equation}
+    l_j(\alpha_j, \beta_j) = \sum_{i=1}^{N} w_{ij}\log P_{ij} + (1-w_{ij})\log
+    Q_{ij},
+  \end{equation}
+  and
+  \begin{equation}
+    l_j(a_j,b_j,\gamma_j) = \sum_{i=1}^{N} x_{ij}\log \dot{P_{ij}} + (1-x_
+    {ij})\log \dot{Q_{ij}}.
+  \end{equation}
+  Since the three sets of item parameters, $\{\alpha_j, \beta_j\}$, $\{a_j,
+  b_j, \gamma_j\}$, and $\{\rho\}$, are separated in different sums in the
+  complete data log-likelihood, we take gradient separately, i.e.
+  \begin{equation}
+  \label{eq:lik_eq_alpha_beta}
+    \nabla l_j(\alpha_j, \beta_j) = 
+    \begin{pmatrix}
+      \frac{\partial l_j}{\partial \alpha_j}\\
+      \\
+      \frac{\partial l_j}{\partial \beta_j}
+    \end{pmatrix}=
+    \begin{pmatrix}
+      \sum_{i=1}^{N} (w_{ij}-P_{ij})(\theta_{i2}-\beta_j)\\
+      \\
+      -\sum_{i=1}^{N} (w_{ij}-P_{ij})\alpha_j
+    \end{pmatrix},
+  \end{equation}
+  and
+  \begin{equation}
+  \label{eq:lik_eq_a_b_gamma}
+    \nabla l_j(a_j,b_j,\gamma_j) =
+    \begin{pmatrix}
+      \frac{\partial l_j}{\partial a_j}\\
+      \\
+      \frac{\partial l_j}{\partial b_j}\\
+      \\
+      \frac{\partial l_j}{\partial \gamma_j}
+    \end{pmatrix}=
+    \begin{pmatrix}
+      \sum_{i=1}^{N} (x_{ij} - P_{ij})(\theta_{i1}-b_j+w_{ij}\gamma_j)\\
+      \\
+      -\sum_{i=1}^{N} (x_{ij} - P_{ij})a_j\\
+      \\
+      \sum_{i=1}^{N} (x_{ij} - P_{ij})a_j w_{ij}
+    \end{pmatrix}.
+  \end{equation}
+  Taking the first order partial derivative w.r.t $\rho$ leads to a third order
+  polynomial in $\rho$,
+  \begin{equation}
+  \label{eq:lik_eq_rho}
+    \frac{\partial l(\rho)}{\partial \rho} = N\rho^3-\left(\sum_{i=1}^
+    {N}\theta_{i1}\theta_{i2}\right)\rho^2 - \left(N - \sum_{i=1}^{N}
+    (\theta_{i1}^2+\theta_{i2}^2)\right)\rho - \sum_{i=1}^{N}\theta_{i1}\theta_{i2}
+  \end{equation}
+
+  \section{Jacobian Matrix}
+  In finding the maximum likelihood estimates, we need to solve the
+  likelihood equations,
+  \begin{equation}
+    E_{\bm{\theta}|\dots}\left[\nabla l_j(\alpha_j, \beta_j)\right] = \bm{0},
+  \end{equation}
+  \begin{equation}
+    E_{\bm{\theta}|\dots}\left[\nabla l_j(a_j, b_j, \gamma_j)\right] = \bm{0},
+  \end{equation},
+  and
+  \begin{equation}
+    E_{\bm{\theta}|\dots}\left[\frac{\partial l(\rho)}{\partial \rho}\right] = 0.
+  \end{equation}
+  These nonlinear systems of equations can be solved numerically by the
+  derivative based Newton-Raphson method. The Jacobian matrix of the
+  gradients are
+  \begin{equation}
+  \begin{gathered}
+    \bm{J}_{\nabla l_j(\alpha_j, \beta_j)} = 
+    \begin{pmatrix}
+      \frac{\partial^2 l_j}{\partial \alpha_j^2} &  \frac{\partial^2 l_j}
+      {\partial \alpha_j \partial \beta_j}\\
+      \\
+      \frac{\partial^2 l_j}{\partial \beta_j \partial \alpha_j} &  
+      \frac{\partial^2 l_j}{\partial \beta_j^2}\\
+    \end{pmatrix}=\\
+    \begin{pmatrix}
+      -\sum_i(\theta_{i2}-\beta_j)^2P_{ij}Q_{ij} & -\sum_i
+      (w_{ij}-P_{ij})-(\theta_{i2}-\beta_j)\alpha_jP_{ij}Q_{ij}\\
+      \\
+      -\sum_i(w_{ij}-P_{ij}) - (\theta_{i2}-\beta_j)\alpha_jP_{ij}Q_{ij}
+      & -\sum_i\alpha_j^2 P_{ij} Q_{ij}
+    \end{pmatrix}
+  \end{gathered}
+  \end{equation}
+  and
+  \begin{equation}
+    \begin{gathered}
+      \bm{J}_{\nabla l_j(a_j, b_j, \gamma_j)} = 
+      \begin{pmatrix}
+        \frac{\partial^2 l_j}{\partial a_j^2} & 
+        \frac{\partial^2 l_j}{\partial a_j \partial b_j} &
+        \frac{\partial^2 l_j}{\partial a_j \partial \gamma_j}\\
+        \frac{\partial^2 l_j}{\partial b_j \partial a_j} &
+        \frac{\partial^2 l_j}{\partial b_j^2} &
+        \frac{\partial^2 l_j}{\partial b_j \partial \gamma_j}\\
+        \frac{\partial^2 l_j}{\partial \gamma_j \partial a_j} &
+        \frac{\partial^2 l_j}{\partial \gamma_j \partial b_j} &
+        \frac{\partial^2 l_j}{\partial \gamma_j^2}
+      \end{pmatrix} = \\
+      \scalemath{0.55}{
+      \begin{pmatrix}
+        -\sum_i(\theta_{i1}-b_j+w_{ij}\gamma_j)^2 \dot{P_{ij}}\dot{Q_{ij}} &
+        \sum_i(\theta_{i1}-b_j+w_{ij}\gamma_j)a_j\dot{P_{ij}}\dot{Q_{ij}} - 
+        (x_{ij}-\dot{P_{ij}}) &
+        -\sum_i(\theta_{i1}-b_j+w_{ij}\gamma_j)a_jw_{ij}\dot{P_{ij}}\dot{Q_
+        {ij}}-w_{ij}(x_{ij}-\dot{P_{ij}})\\
+        \\
+        \sum_i(\theta_{i1}-b_j+w_{ij}\gamma_j)a_j\dot{P_{ij}}\dot{Q_{ij}}-(x_
+        {ij}-\dot{P_{ij}}) &
+        -\sum_i a_j^2 \dot{P_{ij}}\dot{Q_{ij}} &
+        \sum_i a_j^2 w_{ij} \dot{P_{ij}} \dot{Q_{ij}}\\
+        \\
+        -\sum_i (\theta_{i1}-b_j+w_{ij}\gamma_j)a_jw_{ij}\dot{P_{ij}}\dot{Q_
+        {ij}} - w_{ij}(x_{ij}-\dot{P_{ij}}) &
+        \sum_i a_j^2 w_{ij} \dot{P_{ij}} \dot{Q_{ij}} &
+        -\sum_i a_j^2 w_{ij}^2 \dot{P_{ij}} \dot{Q_{ij}} 
+      \end{pmatrix}
+      }
+    \end{gathered}
+  \end{equation}
+
+
+
+
+
+
+\end{document}

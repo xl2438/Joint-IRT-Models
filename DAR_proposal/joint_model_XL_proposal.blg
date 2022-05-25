@@ -1,0 +1,20 @@
+[0] Config.pm:304> INFO - This is Biber 2.14
+[1] Config.pm:307> INFO - Logfile is 'joint_model_XL_proposal.blg'
+[104] biber-MSWIN32:322> INFO - === 
+[127] Biber.pm:415> INFO - Reading 'joint_model_XL_proposal.bcf'
+[282] Biber.pm:943> INFO - Found 6 citekeys in bib section 0
+[305] Biber.pm:4256> INFO - Processing section 0
+[306] Utils.pm:75> INFO - Globbing data source 'lit.bib'
+[353] Utils.pm:91> INFO - Globbed data source 'lit.bib' to lit.bib
+[370] Biber.pm:4455> INFO - Looking for bibtex format file 'lit.bib' for section 0
+[386] bibtex.pm:1653> INFO - LaTeX decoding ...
+[439] bibtex.pm:1471> INFO - Found BibTeX data source 'lit.bib'
+[492] Utils.pm:304> WARN - month field 'apr' in entry 'Markowetz2014' is not an integer - this will probably not sort properly.
+[500] Utils.pm:304> WARN - month field 'jan' in entry 'Hao2015' is not an integer - this will probably not sort properly.
+[535] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[536] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[536] Biber.pm:4084> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[536] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[555] bbl.pm:652> INFO - Writing 'joint_model_XL_proposal.bbl' with encoding 'UTF-8'
+[564] bbl.pm:755> INFO - Output to joint_model_XL_proposal.bbl
+[575] Biber.pm:128> INFO - WARNINGS: 2
