@@ -32,8 +32,8 @@ int solve(gsl_multiroot_fdfsolver *s) {
     // status = gsl_multiroot_test_delta(s->dx, s->x, 1e-11, 0);
     status = gsl_multiroot_test_residual(s->f, 1e-3);
   }while(status == GSL_CONTINUE && iter < 50);
-  if(iter >= 50) std::cout << "Maximum Number of Iterations Reached!" <<
-   std::endl;
+  // if(iter >= 50) std::cout << "Maximum Number of Iterations Reached!" <<
+  //  std::endl;
   // std::cout << "# of iterations: " << iter << std::endl;
   return status;
 }
@@ -59,11 +59,12 @@ int updateParams(jointModel& mo, quadrature& quad, MatrixXd& post_w) {
     f = {&a_b_gamma_f, &a_b_gamma_df, &a_b_gamma_fdf, 3, &p};
     s = gsl_multiroot_fdfsolver_alloc(T, 3);
     gsl_multiroot_fdfsolver_set(s, &f, x_par);
+    status = solve(s);
     int counter = 0;
-    while(solve(s) != GSL_SUCCESS) {
-      // if (counter == 1) {
-      //   s = gsl_multiroot_fdfsolver_alloc(G, 3);
-      // }
+    while(status != GSL_SUCCESS) {
+      if (counter == 1) {
+        s = gsl_multiroot_fdfsolver_alloc(G, 3);
+      }
       gsl_vector_set(x_par, 0, rlnorm(0, 0.15));
       gsl_vector_set(x_par, 1, rnorm(0, 1));
       gsl_vector_set(x_par, 2, rnorm(0, 1));

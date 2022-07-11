@@ -28,8 +28,8 @@ Rcpp::List estimate(MatrixXd& x, MatrixXd& w, int n_itr = 80) {
   	post_w = compute_posterior(mo, quad);
   	updateParams(mo, quad, post_w);
   	current_loglik = updateLoglik(mo, quad);
-  	// std::cout << "Iteration " << i+1 << " Log-likelihood:" << current_loglik
-  	// << std::endl;
+  	std::cout << "Iteration " << i+1 << " Log-likelihood:" << current_loglik
+  	<< std::endl;
   	i++;
   } while(i < n_itr && abs(current_loglik - previous_loglik) > 1e-1);
 

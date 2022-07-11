@@ -1,5 +1,5 @@
 n_item <- 15
-n_person <- 1500
+n_person <- 5000
 
 rho <- matrix(c(1, 0.6, 0.6, 1), nrow = 2)
 rho_sd <- c(1, 1)
@@ -25,13 +25,6 @@ x <- 1 * (p_irt(theta[, 1], a, b, ga, w) > runif(n_item * n_person, 0, 1))
 
 library(Rcpp)
 sourceCpp("test.cpp")
-
-
-for (i in 1:20) {
-  fit <- estimate(x, w) #default to max iterations = 40 or the relative
-  print(fit$a)
-}
-# improvement in loglikelihood is less than 1e-6.
 
 fit <- estimate(x, w) #default to max iterations = 40 or the relative
 fit$a
